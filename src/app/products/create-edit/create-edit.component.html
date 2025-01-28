@@ -1,0 +1,20 @@
+<div class="form-container">
+  <h2>{{ isEditMode ? 'Editar Produto' : 'Adicionar Produto' }}</h2>
+  <form (ngSubmit)="saveProduct()">
+    <label for="name">Nome do Produto:</label>
+    <input type="text" id="name" [(ngModel)]="product.name" name="name" required />
+
+    <label for="customer">Cliente:</label>
+    <input type="text" id="customer" [(ngModel)]="product.customer" name="customer" required />
+
+    <label for="status">Status:</label>
+    <select id="status" [(ngModel)]="product.status" name="status" required>
+      <option value="Completed">Completed</option>
+      <option value="Pending">Pending</option>
+      <option value="Cancelled">Cancelled</option>
+    </select>
+
+    <button type="submit" class="btn save-btn">Salvar</button>
+    <button type="button" class="btn cancel-btn" routerLink="/products">Cancelar</button>
+  </form>
+</div>

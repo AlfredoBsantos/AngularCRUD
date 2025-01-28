@@ -1,0 +1,169 @@
+/* Estilo geral do contêiner */
+.table-container {
+  margin: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Barra de pesquisa */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-btn {
+  margin-left: 10px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-btn:hover {
+  background-color: #1976d2;
+}
+
+/* Botão de adicionar */
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Botões de ações */
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #1976d2;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Status */
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.status.completed {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status.pending {
+  background-color: #ff9800;
+  color: white;
+}
+
+.status.cancelled {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Paginação */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination-btn[disabled] {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.pagination-btn:not([disabled]):hover {
+  background-color: #1976d2;
+}
+
+.pagination-container span {
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: bold;
+}

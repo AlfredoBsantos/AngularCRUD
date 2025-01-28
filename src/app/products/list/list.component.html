@@ -1,0 +1,58 @@
+<div class="table-container">
+  <h2>Produtos</h2>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      placeholder="Pesquisar por nome"
+      (input)="onSearch()"
+      class="search-input"
+    />
+    <button class="btn search-btn" (click)="onSearch()">Buscar</button>
+  </div>
+
+  <!-- Botão de adicionar -->
+  <button class="btn add-btn" routerLink="/products/create">Adicionar Novo</button>
+
+  <!-- Tabela -->
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Cliente</th>
+      <th>Livros</th>
+      <th>Status</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+      <td>#{{ product.id }}</td>
+      <td>{{ product.customer }}</td>
+      <td>{{ product.name }}</td>
+      <td>
+          <span class="status" [ngClass]="product.status.toLowerCase()">
+            {{ product.status }}
+          </span>
+      </td>
+      <td>
+        <button class="btn edit-btn" [routerLink]="['/products/edit', product.id]">Editar</button>
+        <button class="btn delete-btn" (click)="deleteProduct(product.id)">Excluir</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Paginação -->
+  <div class="pagination-container">
+    <button class="btn pagination-btn" (click)="previousPage()" [disabled]="currentPage === 1">
+      Anterior
+    </button>
+    <span>Página {{ currentPage }}</span>
+    <button class="btn pagination-btn" (click)="nextPage()">
+      Próximo
+    </button>
+  </div>
+</div>
